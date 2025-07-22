@@ -1,0 +1,19 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+import numpy as np
+cars_df=pd.read_excel('/mtcars (10).xlsx')
+print(cars_df)
+
+a=plt.scatter(cars_df['mpg'],cars_df['wt'],marker='*')
+print(a)
+plt.xlabel("mpg")
+plt.ylabel("weight")
+plt.title("relationship between the weight of the car and mpg")
+plt.show()
+
+trans=cars_df['am'].value_counts()
+print(trans)
+trans.plot.bar()
+plt.xlabel("transmission")
+plt.title('bar plot to check the frequency distribution of transmission type of cars')
+plt.show()
